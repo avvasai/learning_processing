@@ -17,8 +17,9 @@ class ball {
 
   void display() {
     if (going) {
-      imageMode(CORNER);
+      //imageMode(CORNER);
       //imageMode(CORNERS);
+      imageMode(CENTER);
       image(img, circleX, circleY, 100, 100);
     } else {
       //image(img, width/2, height, 100, 100);
@@ -34,14 +35,14 @@ class ball {
   void edge() {
     if (circleX > width || circleX < 0) {
       spaceX = spaceX * -1;
-      if (speed == 1 && speed<15) {
+      if (speed >= 1 && speed<15) {
         speed++;
       } else {
         speed--;
       }
     } else if ( circleY > height || circleY < 0) {
       spaceY = spaceY * -1;
-      if ( speed == 1 && speed<15) {
+      if ( speed >= 1 && speed<15) {
         speed++;
       } else {
         speed--;
