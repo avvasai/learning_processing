@@ -10,7 +10,7 @@ void draw() {
     for ( float i = 0; i < width; i = i + spacing) {
       for ( float j = 0; j < height; j = j + spacing) {
         stroke(255);
-        fill(random(0, 255));
+        fill(random(0, 255),random(0, 255),random(0, 255));
         square(i, j, 40);
       }
     }
